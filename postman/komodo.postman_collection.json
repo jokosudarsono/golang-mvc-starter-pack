@@ -1,0 +1,258 @@
+{
+	"variables": [],
+	"info": {
+		"name": "komodo",
+		"_postman_id": "2eb62b55-bf25-b92d-b3ea-ed6c6976ca77",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"url": "{{api_url}}/signup",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstname",
+									"value": "John",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "john2828@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Signin",
+					"request": {
+						"url": "{{api_url}}/signin",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "john2828@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todos",
+			"description": "",
+			"item": [
+				{
+					"name": "Get All Todos",
+					"request": {
+						"url": "{{api_url}}/todos",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Todo",
+					"request": {
+						"url": "{{api_url}}/todos/3",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Todo",
+					"request": {
+						"url": "{{api_url}}/todos",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Coba Bikin Todo 4",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2019-09-28 10:10:10",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2019-09-29 10:10:10",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Todo",
+					"request": {
+						"url": "{{api_url}}/todos/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Coba Update Todo",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Ini Deskripsi",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2019-09-28 10:10:10",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2019-09-30 10:10:10",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "in_progress",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Todo",
+					"request": {
+						"url": "{{api_url}}/todos/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Set Done",
+					"request": {
+						"url": "{{api_url}}/todos/1/done",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
