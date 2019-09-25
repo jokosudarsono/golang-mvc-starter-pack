@@ -2,6 +2,15 @@
 
 This is golang starter pack using MVC pattern
 
+## About
+
+This is golang starter pack using MVC pattern
+
+- Focus on REST API Building
+- Support HTTP Verb (GET, POST, PUT, PATCH, DELETE)
+- Support multiple middlewares and specific route middlewares
+- JWT (JSON Web Token) out of the box
+
 #### Download Dependecies
 
 `$ go get github.com/joho/godotenv`
@@ -27,3 +36,4 @@ This is golang starter pack using MVC pattern
 #### Run Apps
 
 `$ go run main.go`
+ 
